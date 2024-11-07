@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    /* styles.css */
+
+/* Resetting basic styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main container styling */
+.single-pro-image, .single-pro-details {
+  max-width: 600px;
+  margin: 20px;
+}
+
+/* Image section styling */
+.single-pro-image {
+  width: 100%;
+  position: relative;
+}
+
+.single-pro-image img.big-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.small-img-group {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.small-img-group .small-img-col {
+  flex: 1;
+  padding: 5px;
+}
+
+.small-img-group .small-img-col img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.small-img-group .small-img-col img:hover {
+  transform: scale(1.05);
+}
+
+/* Product details styling */
+.single-pro-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.single-pro-details h6 {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.single-pro-details h4 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.single-pro-details h2 {
+  font-size: 28px;
+  color: #27ae60;
+  margin-bottom: 15px;
+}
+
+.single-pro-details select, 
+.single-pro-details input[type="number"] {
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 120px;
+}
+
+.single-pro-details .normal {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.single-pro-details .normal:hover {
+  background-color: #219150;
+}
+
+.single-pro-details h4 + span {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+
+
+/* Responsive styling for Vivo phones and similar devices */
+@media (max-width: 412px) {
+  body {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  /* Adjust the main container width */
+  .single-pro-image, .single-pro-details {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  /* Image adjustments */
+  .single-pro-image img.big-img {
+    max-height: 300px;
+  }
+
+  /* Smaller images in a single row layout */
+  .small-img-group {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .small-img-group .small-img-col {
+    flex: none;
+    width: 70px;
+  }
+
+  /* Product details adjustments */
+  .single-pro-details h4 {
+    font-size: 20px;
+  }
+
+  .single-pro-details h2 {
+    font-size: 22px;
+  }
+
+  .single-pro-details select,
+  .single-pro-details input[type="number"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .single-pro-details .normal {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .single-pro-details h4 + span {
+    font-size: 13px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  
+  <div class="single-pro-image">
+    <img src="img/s1.jpg" width="100%" id="mainimg" alt="no" class="big-img">
+    <div class="small-img-group">
+      <div class="small-img-col">
+        <img src="img/s1.jpg" width="100%" alt="no" class="small-img">
+      </div>
+
+      <div class="small-img-col">
+        <img src="img/s2.jpg" width="100%" alt="no" class="small-img">
+      </div>
+
+      <div class="small-img-col">
+        <img src="img/s3.jpg" width="100%" alt="no" class="small-img">
+      </div>
+
+      <div class="small-img-col">
+        <img src="img/s4.jpg" width="100%" alt="no" class="small-img">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="single-pro-details">
+    <h6>Home / T-shirt</h6>
+    <h4>Men's Fshion T shirt</h4>
+    <h2>$${amt}</h2>
+    <select>
+      <option >Select size</option>
+      <option >XL</option>
+      <option >XLL</option>
+      <option >Small</option>
+      <option >Large</option>
+
+    </select>
+    <input type="number" value="1">    <button class="normal">Add To Cart</button>
+    <h4>Product Details</h4>
+
+    <span> Made With Georgette Fabric - The dress is made with georgette fabric which gives it a very elegant and graceful look. The fabric is smooth and silky. • Short Sleeves - The sleeves are short length, ideal for warm days and nights. • square-Neck - The neckline is a very feminine square-neck. The square-shaped neckline is flattering on all body types.</span>
+  </div>
+
+
+
+<script>
+  var mainimg = document.getElementById('mainimg')
+    var smallimg = document.getElementsByClassName('small-img');
+
+
+    smallimg[0].onclick = function () {
+      mainimg.src = smallimg[0].src;
+    }
+    smallimg[1].onclick = function () {
+      mainimg.src = smallimg[1].src;
+    }
+    smallimg[2].onclick = function () {
+      mainimg.src = smallimg[2].src;
+    }
+    smallimg[3].onclick = function () {
+      mainimg.src = smallimg[3].src;
+    }
+</script>
+
+</body>
+</html>
