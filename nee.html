@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image</title>
+  <style>
+    .bor {
+      border: 1px solid green;
+      width: 250px;
+      height: 300px;
+      padding: 10px;
+    }
+    .bor img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Media Query for Vivo and similar small screen devices */
+    @media (max-width: 360px) {
+      .bor {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bor">
+    <img src="img/f1.jpg" alt="no">
+  </div>
+</body>
+</html>
